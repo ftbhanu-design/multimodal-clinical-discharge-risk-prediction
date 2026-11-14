@@ -16,6 +16,7 @@ Predicting **non-routine hospital discharge** — LAMA, discharge on request, or
 
 - [Overview](#overview)
 - [Results](#results)
+- [Power BI dashboards](#power-bi-dashboards)
 - [Architecture](#architecture)
 - [Dataset](#dataset)
 - [Repository layout](#repository-layout)
@@ -59,6 +60,20 @@ Operating point: **τ = 0.379**. Confusion matrix on the test split —
 The threshold trades precision for recall: 74% of high-risk discharges are caught, at the cost of 213 false alerts. At the default 0.5 the model is more conservative — validation accuracy is ~79%, but recall drops, so more high-risk discharges are missed. For a triage alert, recall is the metric that matters; raise τ if alert fatigue is the bigger concern.
 
 ![Evaluation](multimodal_evaluation_plots.png)
+
+## Power BI dashboards
+
+The interactive Power BI dashboards provide an additional view of model performance,
+discharge-risk patterns, and evaluation results.
+
+> **Privacy note:** The dashboard report should contain only de-identified or
+> aggregated data. Review the report before sharing it publicly.
+
+### Dashboard report
+
+The Power BI dashboard export is available as a PDF:
+
+[View the Power BI dashboard report (PDF)](docs/DSH_Project_Reports_pdf.pdf)
 
 ## Architecture
 
